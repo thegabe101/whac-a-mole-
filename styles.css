@@ -1,10 +1,22 @@
+body {
+    background-image: url('whacamole.jpg');
+    background-size: cover;
+    color: white;
+    font-size: large;
+    margin-left: 25vw;
+    justify-content: center;
+}
+
+#header {
+    display: inline;
+    justify-content: space-evenly;
+}
+
 .gameGrid {
     display: flex;
     flex-wrap: wrap;
     width: 606px;
     height: 606px;
-    justify-content: center;
-    align-items: center;
 }
 
 .gameSquare {
@@ -17,5 +29,16 @@
 
 .mole {
     background-image: url('mole.jpg');
-    background-size: 100%;
+    background-size: cover;
+    background-position: 25% 75%;
 }
+ 
+@media only screen 
+    and (device-width: 428px) 
+    and (device-height: 926px) 
+    and (-webkit-device-pixel-ratio: 3) {
+        #header .gameGrid .gameSquare .mole {
+            display: flex;
+            flex-wrap: wrap;
+        }
+     }
